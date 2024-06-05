@@ -1,6 +1,6 @@
 // import { emberekLISTA } from "./adat.js";
 import { rendez, szures, torol } from "./adatKezelo.js";
-import { deleteAdat, getAdat, patchAdat } from "./aszinkron.js";
+import { deeteAdat, deleteAdat, getAdat, patchAdat, postAdat } from "./aszinkron.js";
 import { htmlOsszeallit, megjelenit } from "./listaMegjelenit.js";
 import { adatokListaba } from "./urlapkezelo.js";
 
@@ -8,7 +8,8 @@ getAdat("http://localhost:3000/emberekLISTA", init)
 
 
 let irany = 1;
-szuresEsemeny();
+
+
 
 export function init(lista) {
   console.log(lista);
@@ -17,6 +18,9 @@ export function init(lista) {
   torolEsemeny();
   adatokListaba(lista);
   editelEsemeny(lista);
+  hozzaadEsemeny();
+  szuresEsemeny(lista);
+  
 }
 /* 
 a függvény akkor fut le, ha a táblázat név fejlécére kattintunk. */
@@ -48,6 +52,18 @@ function torolEsemeny() {
     console.log(id);
 
     deleteAdat("http://localhost:3000/emberekLISTA",id)
+  });
+}
+
+function hozzaadEsemeny() {
+  /* Akkor fog lefutni, ha sor melletti torol gombra kattintunk.  */
+  const hozzaadGOMB = $("#submit");
+  hozzaadGOMB.on("click", function (event) {
+    /*  event.target az az elem, amelyik kiváltotta az eseményt */
+    let id = event.target.id;
+    console.log(id);
+
+    postAdat("http://localhost:3000/emberekLISTA",id)
   });
 }
 

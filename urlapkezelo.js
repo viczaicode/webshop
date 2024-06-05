@@ -27,11 +27,11 @@ export function adatokListaba(lista) {
             nem: nemElem.val() === "false" ? false : true
         }
 
-        if (validELEMEK.eq(0).css("display")==="block" && validELEMEK.eq(1).css("display")==="block" ) {
+        //if (validELEMEK.eq(0).css("display")==="block" && validELEMEK.eq(1).css("display")==="block" ) {
              //lista.push(adat)          
             // init(lista)
-            postAdat("http://localhost:3000/emberekLISTA", adat);
-        }
+           // postAdat("http://localhost:3000/emberekLISTA", adat);
+        //}
 
     })
 

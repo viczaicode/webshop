@@ -2,7 +2,7 @@ export function htmlOsszeallit(lista) {
   /*  táblázatot állítok össze */
   let txt = "<table class='table table-striped'>";
   txt +=
-    "<thead><tr><th>Név</th><th>Kor</th><th>Nem</th><th></th></tr></thead>";
+    "<thead><tr><th>ID</th><th>Név</th><th>Kor</th><th>Nem</th><th></th></tr></thead>";
   txt += "<tbody>";
   lista.forEach((elem,index) => {
     /*  a tábla egy sora */
@@ -14,7 +14,7 @@ export function htmlOsszeallit(lista) {
       txt += `<td>${elem[kulcs]}</td>`;
     }
     txt += `<td class='torol' id=${elem.id}>🗑️</td>`;
-    txt += `</tr>`;
+    
 
     txt += `<td class='editel' id=${elem.id}>✍🏻</td>`;
     txt += `</tr>`;

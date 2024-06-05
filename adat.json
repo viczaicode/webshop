@@ -1,14 +1,26 @@
 {
   "emberekLISTA": [
     {
-      "id": "5",
-      "nev": "Jenő",
-      "kor": 222,
+      "id": "6",
+      "nev": "herpesz1",
+      "kor": 132,
       "nem": true
     },
     {
       "id": "6",
-      "nev": "herpesz1",
+      "nev": "Jenő",
+      "kor": 132,
+      "nem": false
+    },
+    {
+      "id": "6",
+      "nev": "Amanda",
+      "kor": 132,
+      "nem": false
+    },
+    {
+      "id": "6",
+      "nev": "Jani",
       "kor": 132,
       "nem": false
     }
